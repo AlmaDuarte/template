@@ -1,0 +1,59 @@
+{%  extends "helpers/base.html"%}
+{%  block content %}
+    <div> TRANSACTIONS </div>
+
+<div class="row">
+    <div class="col">
+      <!--1 of 3-->
+       <table class="table table-bordered">
+
+     <thead>
+        <tr>
+        <th scope="col">Item</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        </tr>
+     </thead>
+  <tbody>
+    <tr><!-- THIS IS WHERE THE LOOP NEEDS TO BE-->
+      <th scope="row">{{phones}}</th>
+      <td>{{howMany}}</td>
+      <td>${{price}}</td>
+    </tr><!-- THIS IS WHERE THE LOOP STOPS-->
+  </tbody>
+</table>
+
+    </div>
+    <div class="col-md-auto">
+      <!--Variable width content-->
+        <div class="form-group">
+    <label for="exampleFormControlSelect1">Select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>{{inventory}}</option>
+
+    </select>
+  </div>
+    </div>
+    <div class="col col-lg-2">
+      <!--3 of 3-->
+        <div class="form-group">
+
+            <label for="howMany">Quantity</label>
+            <input type="number" class ="form-control" id="howMany" name="howMany" min="1" max="1000" value ="1">
+            <input type="submit" class="btn btn-light" value="Add">
+
+
+        </div>
+        <div class="row">
+         <div class="col-sm-9">
+       <!--<button type="button" class="btn btn-light">Add</button>-->
+             <div class="row">
+            <div class="col-sm-9">
+                <a class="btn btn-light" href="#" role="button">Payment</a>
+             </div>
+             </div>
+         </div>
+        </div>
+</div>
+</div>
+{%  endblock %}
